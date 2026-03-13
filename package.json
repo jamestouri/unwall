@@ -1,6 +1,6 @@
 {
   "name": "unwall",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "CLI + MCP server for AI agents to manage ads across Meta, Google, and X through Unwall",
   "type": "module",
   "bin": {
