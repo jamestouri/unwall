@@ -1,0 +1,52 @@
+{
+  "name": "unwall",
+  "version": "0.1.0",
+  "description": "CLI + MCP server for AI agents to manage ads across Meta, Google, and X through Unwall",
+  "type": "module",
+  "bin": {
+    "unwall": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "test": "vitest run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/unwall-xyz/unwall.git"
+  },
+  "homepage": "https://unwall.xyz",
+  "bugs": {
+    "url": "https://github.com/unwall-xyz/unwall/issues"
+  },
+  "keywords": [
+    "mcp",
+    "cli",
+    "ads",
+    "meta",
+    "google",
+    "x",
+    "ai-agents",
+    "advertising"
+  ],
+  "author": "Unwall",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.1",
+    "commander": "^14.0.3",
+    "zod": "^3.24.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.7.0",
+    "vitest": "^3.2.4"
+  }
+}
