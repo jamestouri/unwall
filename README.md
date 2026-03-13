@@ -2,7 +2,7 @@
 
 **One token. All platforms. Real budget enforcement. Free.**
 
-A CLI + MCP server that gives AI agents access to paid services — ads platforms today, LLMs, data APIs, and compute tomorrow — through a single [Unwall](https://unwall.xyz) wallet.
+A CLI + MCP server that gives AI agents such as OpenClaw, and more — access to paid services through a single [Unwall](https://unwall.xyz) wallet. Manage ads across Meta, Google, and X today; LLMs, data APIs, and compute tomorrow.
 
 ## Why
 
@@ -30,13 +30,15 @@ npx unwall google campaigns create --customer 9876543210 --name "Summer Sale" --
 npx unwall x analytics get --account abc --entity CAMPAIGN --entity-ids id1,id2 --start-time 2026-01-01 --end-time 2026-03-01
 ```
 
-### MCP Server (compatibility)
+### MCP Server
+
+Works with any MCP-compatible client — Claude Code, OpenClaw and others
 
 ```bash
 npx unwall serve
 ```
 
-Add to your MCP client config (Claude Code, Cursor, OpenClaw, etc.):
+Add to your MCP client config:
 
 ```json
 {
@@ -83,7 +85,7 @@ All output is JSON — pipe to `jq` or let your agent parse it directly.
 
 ## MCP Tools (29 total)
 
-Only tools for your connected platforms appear. Connect platforms at [unwall.xyz/dashboard](https://unwall.xyz/dashboard).
+When running as an MCP server (via OpenClaw, Claude Code, Cursor, etc.), only tools for your connected platforms appear. Connect platforms at [unwall.xyz/dashboard](https://unwall.xyz/dashboard).
 
 ### Meta Ads (12 tools)
 
@@ -132,10 +134,10 @@ Only tools for your connected platforms appear. Connect platforms at [unwall.xyz
 ## Architecture
 
 ```
-Agent (Claude Code / Cursor / OpenClaw)
+MCP Client (OpenClaw / Claude Code / Cursor / any MCP host)
   │
-  ├── CLI commands (primary)  ─── unwall meta campaigns list
-  ├── MCP protocol (compat)   ─── unwall serve
+  ├── CLI commands             ─── unwall meta campaigns list
+  ├── MCP protocol             ─── unwall serve
   │
   ▼
 unwall (TypeScript, runs locally)
