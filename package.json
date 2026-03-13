@@ -1,6 +1,6 @@
 {
   "name": "unwall",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "CLI + MCP server for AI agents to manage ads across Meta, Google, and X through Unwall",
   "type": "module",
   "bin": {
@@ -20,14 +20,14 @@
     "url": "https://github.com/jamestouri/unwall/issues"
   },
   "keywords": [
-    "mcp",
     "cli",
     "ads",
     "meta",
     "google",
     "x",
     "ai-agents",
-    "advertising"
+    "advertising",
+    "openclaw"
   ],
   "author": "Unwall",
   "license": "MIT",
